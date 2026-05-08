@@ -17,9 +17,20 @@ Do auditor resignation announcements generate statistically significant abnormal
 The study uses an event-study framework:
 
 - Event date: statutory auditor resignation announcement date
-- Estimation window: `[-120, -20]` trading days
+- Primary estimation window: `[-250, -30]` trading days
+- Robustness estimation window: `[-120, -20]` trading days
 - Event windows: `[-1,+1]`, `[0,+1]`, `[-3,+3]`, `[-5,+5]`, and `[-10,+10]`
-- Benchmark model: market model using a broad Indian equity index such as Nifty 500 or Nifty 50
+- Primary benchmark model: market model using a broad Indian equity index such as Nifty 500 or Nifty 50
+- Robustness benchmarks: size index, sector index, and market-adjusted returns
+
+## Planned Statistical Tests
+
+- Average abnormal return and cumulative abnormal return tests
+- t-tests for CAR significance
+- sign tests
+- Patell standardized test
+- BMP test placeholder
+- cross-sectional regressions using CAR as dependent variable
 
 ## Data Sources
 
@@ -52,7 +63,13 @@ The project is designed to use public internet data:
 
 ## Current Status
 
-This repository is in the research-design and data-collection stage. The first empirical milestone is a pilot event study using approximately 20 auditor resignation announcements.
+The research design and Excel template have been revised. The next critical path items are:
+
+1. Collect real auditor resignation events from NSE/BSE.
+2. Complete the Python event-study pipeline.
+3. Run the pilot analysis on approximately 20 events.
+4. Expand the dataset to 100-200 events.
+5. Generate results, regressions, charts, and the SSRN working paper.
 
 ## Disclaimer
 
